@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="left-container"><div #logo-container><img src="logo.png"></div></div>
+    <div class="right-container">
+        <form>
+            <h1>This is not a real online service! You know you need something like this in your life to help
+                you realize your deepest dreams.<br>
+                You <em>know</em> you want to.
+            </h1>
+
+            <h1>Let's do this!</h1>
+            <fieldset class="name">
+                <label for="first-name">First name:</label>
+                <input type="text" id="first-name" placeholder="Thor" required> 
+                <label for="last-name">Last name:</label>
+                <input type="text" id="last-name" placeholder="Odinson" required>
+            </fieldset>
+            
+            <fieldset id="contact">
+                <label for="user-email">Email:</label>
+                <input type="email" id="user_email" placeholder="email@example.com" required>
+                <label for="phone-number">Phone number:</label>
+                <input type="tel" id="phone-number" pattern="\+?4?07[1-9]{1}[0-9]{7}" required>
+            </fieldset>
+            <fieldset id="passwords">
+                <label for="password">Password</label>
+                <input type="password" minlength="3" maxlength="16" id="password" onkeyup="check();" required>
+                <label for="confirm-password">Confirm password </label>
+                <input type="password" minlength="3" maxlength="16" id="confirm-password" onkeyup="check()" required>
+                <div id="message"></div>
+            </fieldset>
+        </form>
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a href="#">Log in</a></p>
+    </div>
+
+
+    <script>
+        function check(){
+            if(document.getElementById("password").value==
+                document.getElementById("confirm-password").value){
+                    document.getElementById("confirm-password").style.cssText = "border: 2px solid green";
+                    document.getElementById("password").style.cssText = "border: 2px solid green";
+                    document.getElementById("message").innerHTML = "Passwords match"
+                } else {
+                    document.getElementById("confirm-password").style.cssText = "border: 2px solid red";
+                    document.getElementById("message").innerHTML = "Passwords do not match";
+                }
+        }
+    </script>
+</body>
+</html>
