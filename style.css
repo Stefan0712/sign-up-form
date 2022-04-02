@@ -1,0 +1,103 @@
+
+@font-face {
+    font-family: odin-font;
+    src: url(resources/Norse-Bold.otf);
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+}
+.left-container{
+    width: 30vw;
+    height: 100vh;
+    
+}
+#background{
+    width: 30vw;
+    height: 100vh;
+    z-index: -5;
+}
+.right-container{
+    width: 70vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+h1 {
+    width: 90%;
+    margin-top: 50px;
+    font-size: 30px;
+}
+form h1 {
+    margin-left: 50px;
+}
+form{
+    box-shadow: 1px 5px 10px #E5E7EB;
+    height: 400px;
+    width: 100%;
+}
+button {
+    background-color: #596D48;
+    color: white;
+    border-radius: 10px;
+    height: 75px;
+    width: 300px;
+    margin-top: 50px;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+input:focus{
+    border: 1px solid rgb(96, 205, 255);
+    box-shadow: 2px 2px 5px;
+}
+fieldset{
+    height: 70px;
+    padding-left: 50px;
+    border: none;   
+
+}
+input{
+    height: 30px;    
+    width: 300px;
+    border-radius: 5px;
+    margin-right: 100px;
+    border: 2px solid #E5E7EB;
+}
+label{
+    font-size: 20px;
+    display: inline-block;
+    width: 300px;  
+    margin-right: 100px; 
+}
+#logo-container{
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 200px;
+    width:30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 100px;
+    z-index: 1;
+    position:absolute;
+    font-family: odin-font;
+    
+}
+#logo-container img{
+    height: 170px;
+    width: 130px;
+    z-index: 2;
+    
+    
+}
+a{
+    color: #596D48;
+    text-decoration: none;
+}
